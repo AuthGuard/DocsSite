@@ -2,7 +2,7 @@
 layout: page
 title: Configuration
 permalink: /config/
-nav_order: 2
+nav_order: 3
 ---
 # Configuration
 Most of AuthGuard internal work is customizable by its configuration. The server expects either JSON or YAML configuration files to be provided named `application.json` or `application.yaml`. Below is a breakdown of the configuration parameters. While this is everything from AuthGuard itself, other components might require other configuration parameters.

@@ -8,19 +8,10 @@ designed to fit into any architecture. It is extensible, configurable, and can b
 adjusted to your own use cases.
 
 # Releases
-## 0.3.0 (experimental) - 28/03/2021
-The first official release. The relase includes:
-1. AuthGuard Kernel and its standard plugins
-2. Official Extensions:
-    * Data access:
-        - MongoDB
-        - PostgreSQL
-        - MySQL
-    * Messaging:
-        - Kafka Bridge
-    * Email providers:
-        - JavaMail (SMTP, IMAP, POP3)
-3. AuthGuard CLI
+All releases and release notes are available on [GitHub](https://github.com/AuthGuard/AuthGuard/releases).
+
+Current stable release: 0.5.0
+Current development version: 0.6.0
 
 # Repositories
 * [Kernel](https://github.com/AuthGuard/AuthGuard)

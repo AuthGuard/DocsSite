@@ -1,8 +1,5 @@
 ---
-layout: page
-title: Run AuthGuard
-permalink: /get-started/
-nav_order: 2
+sidebar_position: 2
 ---
 # Running AuthGuard
 AuthGuard is just a kernel, and, in order to run it, you need a distribution.
@@ -13,6 +10,13 @@ data access interfaces. This allows you to make it work with any database you wa
 
 You may choose one of our pre-built distributions or build your own. In this guide 
 we will go through both approaches.
+
+:::tip Use a standard distribution
+
+If one of our standard distributions matches your needs, then it's easier to 
+use it instead of maintaining your own.
+
+:::
 
 ## Standard Distributions
 We provide some ready-to-use distributions which cover most common use cases. A 
@@ -49,7 +53,20 @@ java -jar -Dlogback.configurationFile=<path to logback config> \
 You may also add JVM configuration to the command, should you need to do so.
 
 ### Container Images
-Standard distributions are also available as container images. You can 
+Standard distributions are also available as container images. You can find the images 
+on [Dockerhub](https://hub.docker.com/), and you can use the following command to run 
+one of the available distributions
+
+```shell
+docker run --name authguard <distribution image>:<tag>
+```
+
+:::danger Provide your own configuration
+
+The previous command will start with its default configuration, you'll need 
+to override that.
+
+:::
 
 ### Manual
 Alternatively, you can use a standard distribution as a basis for your own 

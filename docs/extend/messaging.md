@@ -1,9 +1,5 @@
 ---
-layout: page
-title: Event Subscribers
-permalink: /extend/messaging/
-nav_order: 3
-parent: Extend AuthGuard
+sidebar_position: 4
 ---
 
 # Event Subscribers

@@ -1,8 +1,5 @@
 ---
-layout: page
-title: Design
-permalink: /design/
-nav_order: 4
+sidebar_position: 4
 ---
 # Design
 It is important to understand the fundmental parts of AuthGuard's design to be able to configure and extend it correctly. This document will go through the internal parts without talking about the exposed API.

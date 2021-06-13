@@ -1,13 +1,9 @@
 ---
-layout: page
-title: Exchange Service
-permalink: /extend/exchange/
-nav_order: 2
-parent: Extend AuthGuard
+sidebar_position: 2
 ---
 
 # Exchange Service
-As explained in the [design section](/design), the exchange service powers the whole authentication part of AuthGuard and any flow built on it. You may need to support a differnt type of token which is not one of the ones already present. You do not need to change anything in AuthGuard's code to support; you can just make it available to it at runtime.
+As explained in the [design section](/docs/design), the exchange service powers the whole authentication part of AuthGuard and any flow built on it. You may need to support a differnt type of token which is not one of the ones already present. You do not need to change anything in AuthGuard's code to support; you can just make it available to it at runtime.
 
 ## Exchanges Internally
 Before going ahead to implement your own exchange you need to be aware of the interfaces related to it:

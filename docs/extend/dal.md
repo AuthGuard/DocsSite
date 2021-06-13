@@ -1,9 +1,5 @@
 ---
-layout: page
-title: Data Access Layer
-permalink: /extend/dal/
-nav_order: 1
-parent: Extend AuthGuard
+sidebar_position: 3
 ---
 
 # Data Access Layer

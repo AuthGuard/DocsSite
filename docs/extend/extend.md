@@ -1,9 +1,5 @@
 ---
-layout: page
-title: Extend AuthGuard
-permalink: /extend/
-nav_order: 5
-has_children: true
+sidebar_position: 1
 ---
 
 # Extending AuthGuard

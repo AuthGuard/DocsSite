@@ -1,5 +1,5 @@
 ---
-layout: home
+sidebar_position: 1
 ---
 
 # AuthGuard
@@ -10,8 +10,9 @@ adjusted to your own use cases.
 # Releases
 All releases and release notes are available on [GitHub](https://github.com/AuthGuard/AuthGuard/releases).
 
-Current stable release: 0.5.0
-Current development version: 0.6.0
+Current stable release: 0.6.0
+
+Current development version: 0.7.0
 
 # Repositories
 * [Kernel](https://github.com/AuthGuard/AuthGuard)
@@ -25,3 +26,4 @@ Current development version: 0.6.0
 
 # Questions and Bug Reports
 All questions and bug reports should be submitted as [issues](https://github.com/AuthGuard/AuthGuard/issues) on GitHub.
+

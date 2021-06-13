@@ -7,8 +7,8 @@ module.exports = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'authguard', 
-  projectName: 'AuthGuard', // Usually your repo name.
+  organizationName: 'AuthGuard', 
+  projectName: 'authguard.github.io', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: 'AuthGuard',

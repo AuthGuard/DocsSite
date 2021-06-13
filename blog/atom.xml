@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://authguard.github.io/blog</id>
+    <title>AuthGuard Documentation Blog</title>
+    <updated>2015-10-25T23:29:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://authguard.github.io/blog"/>
+    <subtitle>AuthGuard Documentation Blog</subtitle>
+    <icon>https://authguard.github.io/img/favicon.ico</icon>
+</feed>

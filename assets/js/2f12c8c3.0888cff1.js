@@ -1,0 +1,1 @@
+(self.webpackChunkdocusaurus_test=self.webpackChunkdocusaurus_test||[]).push([[721],{2462:function(s){"use strict";s.exports=JSON.parse('{"type":"url","content":"https://raw.githubusercontent.com/AuthGuard/AuthGuard/master/api/src/main/resources/openapi.yml"}')}}]);

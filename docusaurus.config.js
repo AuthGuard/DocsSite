@@ -1,3 +1,5 @@
+const path =  require('path');
+
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'AuthGuard Documentation',
@@ -9,6 +11,7 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'AuthGuard', 
   projectName: 'authguard.github.io', // Usually your repo name.
+  plugins: [path.resolve(__dirname, 'plugins', 'custom-webpack')],
   themeConfig: {
     navbar: {
       title: 'AuthGuard',
@@ -23,11 +26,11 @@ module.exports = {
           position: 'left',
           label: 'Docs',
         },
-        // {
-        //   position: 'left',
-        //   label: 'API',
-        //   to: '/api'
-        // },
+        {
+          position: 'left',
+          label: 'API',
+          to: '/api'
+        },
         {
           href: 'https://github.com/authguard/AuthGuard',
           label: 'GitHub',
@@ -82,21 +85,21 @@ module.exports = {
         },
       },
     ],
-    // [
-    //   'redocusaurus',
-    //   {
-    //     debug: Boolean(process.env.DEBUG || process.env.CI),
-    //     specs: [
-    //       {
-    //         specUrl: 'https://raw.githubusercontent.com/AuthGuard/AuthGuard/master/api/src/main/resources/openapi.yml',
-    //         routePath: '/api/',
-    //       }
-    //     ],
-    //     theme: {
-    //       primaryColor: '#1890ff',
-    //       redocOptions: { hideDownloadButton: false },
-    //     },
-    //   },
-    // ],
+    [
+      'redocusaurus',
+      {
+        debug: Boolean(process.env.DEBUG || process.env.CI),
+        specs: [
+          {
+            specUrl: 'https://raw.githubusercontent.com/AuthGuard/AuthGuard/master/api/src/main/resources/openapi.yml',
+            routePath: '/api/',
+          }
+        ],
+        theme: {
+          primaryColor: '#1890ff',
+          redocOptions: { hideDownloadButton: false },
+        },
+      },
+    ],
   ],
 };

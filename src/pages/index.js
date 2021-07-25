@@ -67,7 +67,7 @@ const HomeSplash = () => {
         <div
           className={clsx(styles.heroButtons, 'name', 'margin-vert--md')}>
           <Button href={useBaseUrl('docs/intro')}>Get Started</Button>
-          {/* <Button href={useBaseUrl('api')}>Check the API</Button> */}
+          <Button href={useBaseUrl('api')}>Check the API</Button>
         </div>
       </div>
     </div>

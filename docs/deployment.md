@@ -43,7 +43,7 @@ server:
   keystorePassword: changeit
 ```
 
-### One-Time Admin
+## One-Time Admin
 The One-Time Admin (OTA) is an admin that will be created automatically if no other 
 admins exists. Its sole purpose to create at least one more admin and then it should 
 be deleted. That admin only has access to the endpoints which are relavant to that 
@@ -134,5 +134,3 @@ Copy the service to `/etc/systemd/system`, and then run the following commands
 systemctl start authguard.service # to start the service now
 systemctl enable authguard.service # to start the service automatically after reboot
 ```
-
-

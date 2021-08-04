@@ -30,8 +30,8 @@ keytool -import -alias certAlias -file certificate.crt -keypass keypass -keystor
 ```
 
 ### Configuration
-The server configuration options are explained in [Configuration#Server](/docs/configuration#server), 
-however here is the same example which is presented there
+The server configuration options are explained in [Configuration#Server](/docs/configuration#server)
+, however here is the same example which is presented there
 
 ```yaml
 server:
@@ -63,7 +63,9 @@ move the server to prod.
 2. Just keep them defined in the prod environment and proceed as usual.
 
 ## Deploying the Server
-The pre-requisites for this example are:
+There are two options for deploying AuthGuard: as a container, as a normal process.
+In this example we will explain the latter since deploying it as a container is just 
+like any other container. However, you will still need the environment variables. The pre-requisites for this example are:
 1. You are deploying to a Linux machine
 2. You have JRE or JDK installed (11+)
 3. You have systemd running
@@ -74,17 +76,34 @@ are defined.
 :::
 
 ### Build the Distribution
+:::tip Use AuthGuard CLI
+
+If you used AuthGuard CLI to create the distribution then you can just 
+run `ag build` and that will build it.
+
+:::
+
 If you are using your own distribution, you can build it by running one of the 
 following commands for Maven
 ```shell
 mvn package # if you don't have the wrapper
 ./mvnw package # if you have the wrapper
+
+# and if you're building a container image you also need
+mvn docker:build
+# OR
+./mvnw docker:build
 ```
 
 Or, if you are using Gradle
 ```shell
-gradle build
-./gradlew build
+gradle build # if you don't have the wrapper
+./gradlew build # if you have the wrapper
+
+# and if you're building a container image you also need
+gradle docker
+# OR
+./gradlew docker
 ```
 
 ### Copy the Files

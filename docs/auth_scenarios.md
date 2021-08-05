@@ -198,3 +198,14 @@ You can optionally enable token encryption as well. In which case,
 AuthGuard will only return an encrypted token, and then you can 
 decrypt it yourself, or call AuthGuard to do so. Token encryption 
 configuration example can be found [here](/docs/configuration#jwt).
+
+## One-Time Passwords & Passwordless
+OTPs and Passwordless are considered intermediary steps, or 
+extensions to basic authentication. For example, instead of 
+having "basic to session", you would have "basic to OTP" then 
+"OTP to session". In the case of passwordless login, basic is 
+performed without a password.
+
+Those are all defined as exchanges, and are, therefore, 
+available through the exchange endpoint, or can be configured 
+to be used through the authenticate endpoint.

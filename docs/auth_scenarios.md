@@ -197,4 +197,4 @@ current token without logging in again.
 You can optionally enable token encryption as well. In which case,
 AuthGuard will only return an encrypted token, and then you can 
 decrypt it yourself, or call AuthGuard to do so. Token encryption 
-configuration example can be found [here](/configuration#examples-4).
+configuration example can be found [here](/docs/configuration#jwt).

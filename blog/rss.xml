@@ -4,8 +4,15 @@
         <title>AuthGuard Documentation Blog</title>
         <link>https://authguard.github.io/blog</link>
         <description>AuthGuard Documentation Blog</description>
-        <lastBuildDate>Sun, 25 Oct 2015 23:29:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 05 Sep 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Tutorial 1: Basic example]]></title>
+            <link>https://authguard.github.io/blog/welcome-docusaurus-v2</link>
+            <guid>welcome-docusaurus-v2</guid>
+            <pubDate>Sun, 05 Sep 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[This is my first post on Docusaurus 2]]></description>
+        </item>
     </channel>
 </rss>

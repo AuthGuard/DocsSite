@@ -27,6 +27,11 @@ module.exports = {
           label: 'Docs',
         },
         {
+          to: '/blog',
+          position: 'left',
+          label: 'Blog',
+        },
+        {
           position: 'left',
           label: 'API',
           to: '/api'

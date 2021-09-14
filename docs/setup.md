@@ -13,7 +13,7 @@ for that application. You can use the [OTA](/docs/deployment#One-Time-Admin) to 
 that for the first time, then use the API key to create more if needed.
 
 ### Create Admin Account
-Create a POST request to /accounts
+Make a POST request to /accounts
 ```json
 {
 	"roles": [
@@ -23,7 +23,7 @@ Create a POST request to /accounts
 ```
 
 ### Create Admin Credentials
-Create a POST request to /credentials
+Make a POST request to /credentials
 ```json
 {
 	"accountId": "{{admin_account_id}}",
@@ -38,7 +38,7 @@ Create a POST request to /credentials
 ```
 
 ### Create Admin Application
-Create a POST request to /apps
+Make a POST request to /apps
 ```json
 {
     "name": "Your application name",
@@ -50,12 +50,39 @@ Create a POST request to /apps
 ```
 
 ### Generate an API Key
-Create a POST request to /keys
+Make a POST request to /keys
 ```json
 {
 	"appId": "{{admin_app_id}}"
 }
 ```
+
+### Create Auth Client
+Unlike the admin application we just created, an auth application can only 
+access a limited number of endpoints. Auth clients have keys which can be 
+made public if you needed your application to communicate with AuthGuard 
+directly to register users and log them in. 
+
+Make a POST request to /apps
+```json
+{
+    "name": "Your application name",
+	"accountId": "{{admin_account_id}}",
+	"roles": [
+		"authguard_auth_client"
+	]
+}
+```
+And then generate an API key just like the previous step. The only 
+endpoints this client will have access to are:
+* POST `/credentials`
+* GET `/credentials/identifier/{identifier}/exists`
+* POST `/accounts` (all phone numbers and emails will be set to unverified if the `verified` flag was set to true)
+* GET `/accounts/email/{email}/exists`
+* POST `/auth/exchange`
+* POST `/auth/authenticate`
+* POST `/credentials/reset_token`
+* POST `/credentials/reset`
 
 ### Create Other Users
 Creating a user is just like creating an admin user, except that the account 
@@ -80,5 +107,5 @@ where you perform a POST request to /auth/authenticate
 }
 ```
 
-The auth request takes more parameters. You can learn more on the API 
-documentation 
+The auth request takes more parameters. You can know more from the [API 
+documentation](/api).

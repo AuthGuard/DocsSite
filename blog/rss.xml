@@ -9,8 +9,8 @@
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
             <title><![CDATA[Tutorial 1: Basic example]]></title>
-            <link>https://authguard.github.io/blog/welcome-docusaurus-v2</link>
-            <guid>welcome-docusaurus-v2</guid>
+            <link>https://authguard.github.io/blog/tutorial-basic-example</link>
+            <guid>tutorial-basic-example</guid>
             <pubDate>Sun, 05 Sep 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[This is my first post on Docusaurus 2]]></description>
         </item>

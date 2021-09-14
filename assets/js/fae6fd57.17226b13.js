@@ -1,0 +1,1 @@
+(self.webpackChunkdocusaurus_test=self.webpackChunkdocusaurus_test||[]).push([[866],{6353:function(e){"use strict";e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Tutorial 1: Basic example","permalink":"/blog/tutorial-basic-example"}]}')}}]);

@@ -1,7 +1,7 @@
 ---
 title: "Tutorial 1: Basic example"
 description: This is my first post on Docusaurus 2
-slug: welcome-docusaurus-v2
+slug: tutorial-basic-example
 tags: [tutorial]
 hide_table_of_contents: false
 ---

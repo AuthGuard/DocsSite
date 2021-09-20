@@ -58,7 +58,7 @@ async function checkEmail(e) {
     } 
 
     // if the response is 404 then it doesn't exist and we're good to go
-}
+} 
 
 function checkUsername(e) {
     let username = e.target.value;
@@ -225,13 +225,9 @@ update request to AuthGuard.
 
 ### Password Reset
 If a user forgot their password, they can receive a temporary 
-password reset token sent to their email. The process is 
-fairly straightforward, but it requires your server to make the 
-request and not the client, since AuthGuard sends the token 
-back in the response. This is a temporary state, and in the 
-future AuthGuard will send the token only if the caller is 
-an admin client. You can issue a POST request to 
-`/credentials/reset_token` with the body
+password reset token sent to their email. You can issue a POST 
+request to `/credentials/reset_token` to generate a reset 
+token.
 
 ```js
 {
@@ -244,6 +240,16 @@ AuthGuard will send the email itself. Otherwise, your
 server will need to send it. Typically, the email will 
 contain a URL to a reset page of your own which will 
 accept the token as a query parameter;
+
+:::note Auth client vs admin client
+
+The reset token is returned back in the response only if 
+the request was made by an admin client. If you want an 
+auth client to make the request then having the Token Send 
+plugin and an email provider plugin is a requirement. 
+Standard distributions come with both.
+
+:::
 
 Once the user has the reset token, in your reset page, you 
 can do the following

@@ -10,9 +10,9 @@ adjusted to your own use cases.
 # Releases
 All releases and release notes are available on [GitHub](https://github.com/AuthGuard/AuthGuard/releases).
 
-Current stable release: 0.6.0
+Current stable release: 0.9.0
 
-Current development version: 0.7.0
+Current development version: 0.10.0
 
 # Repositories
 * [Kernel](https://github.com/AuthGuard/AuthGuard)

@@ -4,9 +4,16 @@
         <title>AuthGuard Documentation Blog</title>
         <link>https://authguard.github.io/blog</link>
         <description>AuthGuard Documentation Blog</description>
-        <lastBuildDate>Sun, 05 Sep 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 10 Nov 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Tutorial 2: Federation with LDAP]]></title>
+            <link>https://authguard.github.io/blog/tutorial-ldap</link>
+            <guid>tutorial-ldap</guid>
+            <pubDate>Wed, 10 Nov 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[An example on how to use AuthGuard to authenticate users using an LDAP server]]></description>
+        </item>
         <item>
             <title><![CDATA[Tutorial 1: Basic example]]></title>
             <link>https://authguard.github.io/blog/tutorial-basic-example</link>

@@ -43,6 +43,9 @@ server:
   keystorePassword: changeit
 ```
 
+## JWT
+Before using JWTs, you need to generate 
+
 ## One-Time Admin
 The One-Time Admin (OTA) is an admin that will be created automatically if no other 
 admins exists. Its sole purpose to create at least one more admin and then it should 

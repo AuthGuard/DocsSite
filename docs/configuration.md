@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
 # Configuration
 Most of AuthGuard internal work is customizable by its configuration. The server expects 

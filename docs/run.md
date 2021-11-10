@@ -24,6 +24,9 @@ standard distribution comes equipped with:
 * JWT plugin
 * Sessions plugin
 * Account lock plugin
+* Plugin to send passwordless tokens
+* Plugin to send verification emails
+* JavaMail plugin
 
 The only difference among all standard distributions is the data access implementation.
 They all come with only a single implementation for both persistence and cache.
@@ -31,9 +34,10 @@ We currently provide:
 * Mongo standard distribution
 * PostgreSQL standard distribution
 * MySQL standard distribution
-* CockroachDB standard distribution
 
-And more will be added later.
+And more will be added later. For information on how to use the standard distributions 
+refer to [the quick start page](/docs/quick-start).
+
 
 ### JARs
 You can download any of the standard distributions, from [the download page](https://www.nexblocks.com/downloads/authguard). 

@@ -3,7 +3,7 @@ sidebar_position: 10
 ---
 # Identity Federation
 
-:::warn Experimental Features
+:::note Experimental Features
 
 Federation and Social Login/Signup are still experimental 
 features and may not be ready for production use yet.

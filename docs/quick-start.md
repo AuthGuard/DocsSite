@@ -42,7 +42,7 @@ services:
 
 In this file we are basically just creating a MongoDB container called 
 mongodb, and another container called my_authguard. For the AuthGuard 
-container, we are mounting two local directories which to make the server 
+container, we are mounting two local directories to make the server 
 pick the configuration we have for the environment as well as JWT signing 
 and encryption keys.
 

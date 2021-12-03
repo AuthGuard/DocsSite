@@ -4,9 +4,16 @@
         <title>AuthGuard Documentation Blog</title>
         <link>https://authguard.github.io/blog</link>
         <description>AuthGuard Documentation Blog</description>
-        <lastBuildDate>Wed, 10 Nov 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 03 Dec 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Tutorial 2: Social login with OpenID Connect]]></title>
+            <link>https://authguard.github.io/blog/tutorial-oidc</link>
+            <guid>tutorial-oidc</guid>
+            <pubDate>Fri, 03 Dec 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Identity federation with AuthGuard and and OpenID Connect provider]]></description>
+        </item>
         <item>
             <title><![CDATA[Tutorial 2: Federation with LDAP]]></title>
             <link>https://authguard.github.io/blog/tutorial-ldap</link>

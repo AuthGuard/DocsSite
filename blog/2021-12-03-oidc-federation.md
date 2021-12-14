@@ -1,5 +1,5 @@
 ---
-title: "Tutorial 2: Social login with OpenID Connect"
+title: "Tutorial 3: Social login with OpenID Connect"
 description: Identity federation with AuthGuard and and OpenID Connect provider
 slug: tutorial-oidc
 tags: [tutorial]

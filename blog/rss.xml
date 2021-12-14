@@ -4,11 +4,18 @@
         <title>AuthGuard Documentation Blog</title>
         <link>https://authguard.github.io/blog</link>
         <description>AuthGuard Documentation Blog</description>
-        <lastBuildDate>Fri, 03 Dec 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 13 Dec 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
-            <title><![CDATA[Tutorial 2: Social login with OpenID Connect]]></title>
+            <title><![CDATA[Tutorial 4: Sending emails and text messages]]></title>
+            <link>https://authguard.github.io/blog/tutorial-email-sms</link>
+            <guid>tutorial-email-sms</guid>
+            <pubDate>Mon, 13 Dec 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Configuring AuthGuard to send emails and text messages directly]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Tutorial 3: Social login with OpenID Connect]]></title>
             <link>https://authguard.github.io/blog/tutorial-oidc</link>
             <guid>tutorial-oidc</guid>
             <pubDate>Fri, 03 Dec 2021 00:00:00 GMT</pubDate>

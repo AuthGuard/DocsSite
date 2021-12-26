@@ -3,7 +3,7 @@ sidebar_position: 2
 ---
 
 # Bridge to Kafka
-We touched on the messaging aspect of AuthGuard in the [design sectio](/design), and went more into details on how to subscribe to internal events in the [events subscribers](/extend/messaging). So far it has been all internal, but ultimately, AuthGuard will run as part of a larger system. You can connect it to other parts of the system by providing an events bridge.
+We touched on the messaging aspect of AuthGuard in the [design sectio](/docs/design), and went more into details on how to subscribe to internal events in the [events subscribers](/docs/extend/messaging). So far it has been all internal, but ultimately, AuthGuard will run as part of a larger system. You can connect it to other parts of the system by providing an events bridge.
 
 An event bridge simply takes internal events and pushes them to an external messaging system. It can also change the format and structure of the events to comply with your own standards if you have certain events structure already in place.
 

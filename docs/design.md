@@ -9,7 +9,7 @@ AuthGuard is implemented in three layers: API layer, service layer, and data acc
 layer, with an extra messaging layer parallel to the service layer.
 
 ### API Layer
-The outer most layer which exposes a REST API built using Javalin. Refer to the API
+The outermost layer which exposes a REST API built using Javalin. Refer to the API
 documentation to the available endpoints and payloads
 
 ### Service Layer

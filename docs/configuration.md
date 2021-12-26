@@ -18,6 +18,14 @@ All configuration must be under the root 'authguard', whether it's JSON or YAML.
 is the break down of the configuration parameters. Note that other plugins also bring 
 with them their own configuration which can also be added here.
 
+:::tip Using environment variables
+
+To read any configuration value from environment variables, you can set the 
+property to "env:" followed by the name of the variable. For example, "env:MY_VARIABLE"
+will read the value of the variable MY_VARIABLE.
+
+:::
+
 ## Injection
 Since AuthGuard will look for plugins when it starts, you need to tell it which 
 packages it's allowed to search.
@@ -140,6 +148,7 @@ authentication:
 | requirePhoneNumber  | Require a phone number to be supplied or not  |
 | verifyEmail         | Verify an account email after it was created  |
 | verifyPhoneNumber   | Verify an account phone number after it was created  |
+| defaultRoles        | A list of roles to be added to an account by if none were specified |
 
 ## Passwords
 Currently, only two password hashing algorithms are supported: bcrypt and scrypt. 
@@ -151,6 +160,7 @@ well password conditions.
 | algorithm | The name of the algorithm to use 'bcrypt' or 'scrypt' |
 | scrypt    | Configuration for scrypt (see below)  |
 | bcrypt    | Configuration for bcrypt (see below)  |
+| validFor  | Duration after which a password will expire (e.g. '30d' for 30 days) |
 
 ### SCrypt
 | Property  | Description |
@@ -280,7 +290,7 @@ external:
 ```
 
 ## One-Time Passwords
-:::tip Requires An email or SMS provider
+:::note Use the email or sms plugin with an email provider to make AuthGuard send the token itself
 
 :::
 
@@ -301,7 +311,7 @@ otp:
 ```
 
 ## Passwordless
-:::tip Use the Passwordless-Send plugin to make AuthGuard send the token itself
+:::note Use the email plugin with an email provider to make AuthGuard send the token itself
 
 :::
 
@@ -326,12 +336,38 @@ defined, you can decide which ones to allow.
 
 | Property  | Description |
 | --- | --- |
-| channels     | An array of the names of channels to allow |
+| channels    | An array of the names of channels to allow |
+| subscribers | An array of fully-qualified name of subscriber classes to allow to subscribe |
 
+Locking down which subscribers are allowed to be automatically subscribed to 
+channels was added to prevent unintentially adding an external plugin with 
+subscribers to read data it is not meant to read.
+
+### Examples
 ```yaml
 emb:
   channels: 
     - accounts
     - auth
+    - passwordless
+  subscribers:
+    - com.nexblocks.authguard.external.email.subscribers.EmailPasswordlessSubscriber
 ```
 
+## API Keys
+AuthGuard comes with a default API key provider but can also be configured 
+to use a different one. For example, the JWT extension adds another provider 
+for JWT-based API keys. 
+
+| Property  | Description |
+| --- | --- |
+| type | The name/type of the provider to use ('default' or something else) |
+| randomSize | Size of the key in bytes (default is 32 bytes) |
+| hash | The hash configuration |
+
+Hash configuration:
+
+| Property  | Description |
+| --- | --- |
+| algorithm | Only 'blake2b' is currently supported |
+| key | The secret key to use for hashing |

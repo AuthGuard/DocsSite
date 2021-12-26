@@ -1,9 +1,5 @@
 ---
-layout: page
-title: Bridge to Kafka
-permalink: /extend/case-studies/kafka
-nav_order: 1
-parent: Case Studies
+sidebar_position: 2
 ---
 
 # Bridge to Kafka

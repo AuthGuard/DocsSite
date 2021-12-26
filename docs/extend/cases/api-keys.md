@@ -1,9 +1,5 @@
 ---
-layout: page
-title: Generating Custom API Keys
-permalink: /extend/case-studies/api-keys
-nav_order: 2
-parent: Case Studies
+sidebar_position: 3
 ---
 
 # Generating Custom API Keys

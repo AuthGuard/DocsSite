@@ -79,7 +79,6 @@ endpoints this client will have access to are:
 * GET `/credentials/identifier/{identifier}/exists`
 * POST `/accounts` (all phone numbers and emails will be set to unverified if the `verified` flag was set to true)
 * GET `/accounts/email/{email}/exists`
-* POST `/auth/exchange`
 * POST `/auth/authenticate`
 * POST `/credentials/reset_token`
 * POST `/credentials/reset`

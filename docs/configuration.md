@@ -148,7 +148,8 @@ authentication:
 | requirePhoneNumber  | Require a phone number to be supplied or not  |
 | verifyEmail         | Verify an account email after it was created  |
 | verifyPhoneNumber   | Verify an account phone number after it was created  |
-| defaultRoles        | A list of roles to be added to an account by if none were specified |
+| defaultRoles        | A list of roles to be added to an account if none were specified |
+| defaultDomain       | The domain to use when creating the default roles |
 
 ## Passwords
 Currently, only two password hashing algorithms are supported: bcrypt and scrypt. 
@@ -157,10 +158,14 @@ well password conditions.
 
 | Property  | Description |
 | --- | --- |
-| algorithm | The name of the algorithm to use 'bcrypt' or 'scrypt' |
-| scrypt    | Configuration for scrypt (see below)  |
-| bcrypt    | Configuration for bcrypt (see below)  |
-| validFor  | Duration after which a password will expire (e.g. '30d' for 30 days) |
+| algorithm   | The name of the algorithm to use 'bcrypt' or 'scrypt' |
+| scrypt      | Configuration for scrypt (see below)  |
+| bcrypt      | Configuration for bcrypt (see below)  |
+| validFor    | Duration after which a password will expire (e.g. '30d' for 30 days) |
+| conditions  | Conditions a new password must meet |
+| version     | Current version number of password configuration (integer) |
+| previousVersions  | Previous password configurations by version (explained below) |
+| minimumVersion    | The minimum acceptable version, any version below it is considered expired |
 
 ### SCrypt
 | Property  | Description |
@@ -176,6 +181,38 @@ well password conditions.
 | --- | --- |
 | cost      | default 4 |
 | saltSize  | default 16 |
+
+### Conditions
+| Property  | Description |
+| --- | --- |
+| includeDigits             | Must include at least one digit (true/false) |
+| includeCaps               | Must include at least one capital letter (true/false) |
+| includeSpecialCharacters  | Must include at least one special character (true/false) |
+| includeSmallLetters       | Must include at least one small character (true/false), default true |
+| maxLength                 | Maximum length, default 30 |
+| minLength                 | Minimum length, default 6 |
+
+### Version and Previous Versions
+Whenever a user's credentials are stored, they get tagged by a version. The version 
+indicates which password configuration was used to create that password. This, when 
+paired with previous versions configuration, allows you to update the hashing 
+configuration without affecting existing passwords. For example, if you are currently 
+using BCrypt and decided to switch to use SCrypt, then you can move your existing 
+BCrypt configuration into a previous versions item, set SCrypt as the new one and 
+change the version number as follows. 
+
+```yaml
+passwords:
+  algorithm: scrypt
+  scrypt:
+    blockSize: 16
+  conditions:
+    minLength: 6
+  version: 2 # was previously 1
+  previousVersions:
+    - version: 1 # version 1 was moved here
+      algorithm: bcrypt
+```
 
 ## JWT
 If you intent to use the JWT plugin, you need to provide some general configuration 
